@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Slideshow.css';
 
 const Slideshow = () => {
   // Array of images (can be updated with your own images)

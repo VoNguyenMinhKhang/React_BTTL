@@ -17,35 +17,37 @@
     height: 450px;
     object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for more depth */
-    transition: transform 0.5s ease-in-out; /* Smooth image transition effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Increased shadow for depth */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Added shadow transition */
 }
 
 /* Hover effect to scale the image slightly */
 .slideshow-image:hover {
-    transform: scale(1.02);
+    transform: scale(1.05); /* Slightly increased scale for more emphasis */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35); /* Deeper shadow on hover */
 }
 
 /* Navigation button styles */
 .nav-button {
     position: absolute;
     top: 50%;
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly lighter background */
     color: white;
     border: none;
     padding: 12px 24px;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 50px; /* Rounded buttons for a softer look */
     font-size: 18px;
     z-index: 1;
     transform: translateY(-50%);
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added shadow transition */
 }
 
 /* Button hover effect */
 .nav-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    transform: translateY(-50%) scale(1.05);
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background on hover */
+    transform: translateY(-50%) scale(1.1); /* Increased scale on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Shadow effect on hover */
 }
 
 /* Positioning for previous button */
@@ -69,21 +71,19 @@
     padding: 12px 24px;
     border-radius: 8px;
     font-size: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Animation for the counter */
-.image-counter {
-    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+    animation: fadeIn 1s ease-in-out; /* Animation for the counter */
 }
 
 /* Fade-in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(-10px); /* Slight upward movement */
     }
     to {
         opacity: 1;
+        transform: translateY(0); /* Final position */
     }
 }
 
